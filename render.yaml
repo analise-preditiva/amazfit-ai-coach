@@ -1,0 +1,23 @@
+services:
+  - type: web
+    name: amazfit-ai-coach
+    runtime: docker
+    plan: free
+    healthCheckPath: /healthz
+    envVars:
+      - key: BASE_URL
+        sync: false
+      - key: ZEPP_CLIENT_ID
+        sync: false
+      - key: ZEPP_CLIENT_SECRET
+        sync: false
+      - key: ZEPP_AUTH_URL
+        sync: false
+      - key: ZEPP_TOKEN_URL
+        sync: false
+      - key: ZEPP_API_BASE
+        sync: false
+      - key: ZEPP_SCOPES
+        value: profile activity sleep heartrate
+      - key: SESSION_SECRET
+        sync: false
